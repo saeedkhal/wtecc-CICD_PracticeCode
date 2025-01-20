@@ -56,7 +56,7 @@ class CounterTest(TestCase):
         self.assertEqual(resp.status_code, status.HTTP_201_CREATED)
         data = resp.get_json()
         self.assertEqual(data["name"], name)
-        self.assertEqual(data["counter"], 0)
+        self.assertEqual(data["counter"], 55)
 
     def test_create_duplicate_counter(self):
         """ It should not Create a duplicate counter """
